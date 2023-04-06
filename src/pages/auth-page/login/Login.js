@@ -42,10 +42,9 @@ const Login = () => {
             initialValues={initialValues}
             validationSchema={LoginSchema}
             onSubmit={async (values) => {
-              console.log(values);
               try {
                 const responseData = await sendRequest(
-                  "http://localhost:5000/api/user/login",
+                  `${process.env.REACT_APP_BACKEND_URL}/api/user/login`,
                   "POST",
                   JSON.stringify(values),
                   { "Content-Type": "application/json" }

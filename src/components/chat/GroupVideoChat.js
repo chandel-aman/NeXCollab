@@ -18,7 +18,7 @@ const GroupVideoChat = () => {
     console.log(roomName);
     try {
       const response = await sendRequest(
-        `http://localhost:5000/api/project/${ctx.userId}/${prjName}/join-room`,
+        `${process.env.REACT_APP_BACKEND_URL}/api/project/${ctx.userId}/${prjName}/join-room`,
         "POST",
         JSON.stringify({ roomName: roomName }),
         {

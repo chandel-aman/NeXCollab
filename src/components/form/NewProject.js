@@ -46,7 +46,7 @@ const NewProject = (props) => {
           let responseData;
           try {
             responseData = await sendRequest(
-              `http://localhost:5000/api/project/${ctx.userId}/createpro`,
+              `${process.env.REACT_APP_BACKEND_URL}/api/project/${ctx.userId}/createpro`,
               "POST",
               JSON.stringify(values),
               {

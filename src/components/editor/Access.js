@@ -54,7 +54,7 @@ const AccessBar = (props) => {
 
     try {
       const responseData = await sendRequest(
-        `http://localhost:5000/api/project/${ctx?.userId}/${prjName}/add`,
+        `${process.env.REACT_APP_BACKEND_URL}/api/project/${ctx?.userId}/${prjName}/add`,
         "POST",
         JSON.stringify({ addUserAccess: `${mem}` }),
         { "Content-Type": "application/json" }
@@ -72,7 +72,7 @@ const AccessBar = (props) => {
     console.log(event.target.value);
     try {
       const responseData = await sendRequest(
-        `http://localhost:5000/api/project/${ctx?.userId}/${prjName}/${event.target.value}`
+        `${process.env.REACT_APP_BACKEND_URL}/api/project/${ctx?.userId}/${prjName}/${event.target.value}`
       );
       console.log(responseData);
       setUserProject({
@@ -92,7 +92,7 @@ const AccessBar = (props) => {
 
     try {
       const responseData = await sendRequest(
-        `http://localhost:5000/api/project/${ctx?.userId}/${prjName}/removeAccess`,
+        `${process.env.REACT_APP_BACKEND_URL}/api/project/${ctx?.userId}/${prjName}/removeAccess`,
         "DELETE",
         JSON.stringify({ userId: uId, projectId: userProject._id }),
         { "Content-Type": "application/json" }

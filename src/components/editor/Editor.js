@@ -98,7 +98,7 @@ const CodeEditor = () => {
         if (ctx.userId) {
           console.log("here");
           const responseData = await sendRequest(
-            `http://localhost:5000/api/project/${ctx?.userId}/${prjName}`
+            `${process.env.REACT_APP_BACKEND_URL}/api/project/${ctx?.userId}/${prjName}`
           );
           console.log(responseData);
           setUserProject(responseData.project);
@@ -193,7 +193,7 @@ const CodeEditor = () => {
     dbCopy(userProject.projectName, newDb);
     try {
       const responseData = await sendRequest(
-        `http://localhost:5000/api/project/${ctx?.userId}/${prjName}`,
+        `${process.env.REACT_APP_BACKEND_URL}/api/project/${ctx?.userId}/${prjName}`,
         "POST",
         JSON.stringify(body),
         { "Content-Type": "application/json" }

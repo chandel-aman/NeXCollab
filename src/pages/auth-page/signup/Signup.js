@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import { useHttpClient } from "../../../shared/hooks/http-hook";
 import { Formik, Form, Field, ErrorMessage, useFormikContext } from "formik";
 import * as Yup from "yup";
-import {AuthContext} from "../../../shared/context/auth-context";
+import { AuthContext } from "../../../shared/context/auth-context";
 
 import Button from "../../../shared/UI/Button/Button";
 
@@ -39,8 +39,7 @@ const SignUp = () => {
   const navigate = useNavigate();
   const authCtx = useContext(AuthContext);
 
-  const {sendRequest} = useHttpClient();
-
+  const { sendRequest } = useHttpClient();
 
   const errorStyles = {
     color: "red",
@@ -49,18 +48,23 @@ const SignUp = () => {
   };
   return (
     <div className={classes.container}>
-      <div className={classes.image}/>
+      <div className={classes.image} />
 
       <Formik
         initialValues={initialValues}
         validationSchema={SignupSchema}
         onSubmit={async (values) => {
-          try{
-            const responseData = await sendRequest("http://localhost:5000/api/user/signup","POST", JSON.stringify(values), {'Content-Type': 'application/json'});
-            const {userId, token, username} = await responseData;
+          try {
+            const responseData = await sendRequest(
+              `${process.env.REACT_APP_BACKEND_URL}/api/user/signup`,
+              "POST",
+              JSON.stringify(values),
+              { "Content-Type": "application/json" }
+            );
+            const { userId, token, username } = await responseData;
             authCtx.login(userId, token, username);
             navigate("/:uId/dashboard");
-          }catch(error){
+          } catch (error) {
             console.log(error);
           }
         }}
@@ -93,11 +97,11 @@ const SignUp = () => {
                 component="div"
                 style={errorStyles}
               />
-              <Button type="submit">
-                Sign Up
-              </Button>
+              <Button type="submit">Sign Up</Button>
             </Form>
-            <p onClick={() => navigate("/login")} className={classes.btnTxt}>or login</p>
+            <p onClick={() => navigate("/login")} className={classes.btnTxt}>
+              or login
+            </p>
           </div>
         )}
       </Formik>

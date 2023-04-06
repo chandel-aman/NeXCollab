@@ -22,7 +22,7 @@ const PrjList = () => {
     const fetchProjects = async () => {
       try {
         const responseData = await sendRequest(
-          `http://localhost:5000/api/project/${ctx.userId}`
+          `${process.env.REACT_APP_BACKEND_URL}/api/project/${ctx.userId}`
         );
         console.log(responseData.project);
         setLoadedProjects(responseData.project);
