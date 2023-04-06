@@ -1,0 +1,52 @@
+@import url("../../color.css");
+
+.chat {
+  width: 25rem;
+  position: absolute;
+  left: 61%;
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
+  padding: 0.5rem;
+  z-index: 2;
+  background-color: var(--primary-color);
+}
+
+.userid {
+  font-size: 1rem;
+  font-style: oblique;
+}
+
+.list {
+  width: max-content;
+  list-style-type: none;
+  width: 100%;
+  max-height: 15rem;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.list li {
+  overflow-wrap: break-word;
+}
+
+.userMsg {
+  float: left;
+  color: var(--secondary-color);
+}
+
+.senderMsg {
+  float: right;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.list {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+h1:hover {
+  cursor: copy;
+}

@@ -1,0 +1,57 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  background-color: #000;
+  color: #fff;
+  border-bottom: 2px solid #0080ff;
+  z-index: 999;
+}
+
+.logotxt {
+  font-size: 1.3rem;
+  font-weight: 600;
+  background: -webkit-linear-gradient(45deg, #0080ff, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 999;
+}
+
+.username {
+  cursor: pointer;
+}
+
+.user .logout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 7rem;
+  margin-top: 0.5rem;
+  padding: 5px 3px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  position: absolute;
+  right: 0.4rem;
+  top: -3rem;
+  transition: slide-in 400ms ease;
+}
+
+.user .logout.showLogout {
+  top: 3rem;
+  opacity: 100%;
+  z-index: 101;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}

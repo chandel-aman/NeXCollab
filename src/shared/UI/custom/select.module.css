@@ -1,0 +1,50 @@
+.select-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.select-container button{
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.select-container .options{
+    text-decoration: none;
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    gap: 0.7rem;
+    width: 1rem;
+    overflow: hidden;
+    position: absolute;
+    left: 3.6rem;
+    top: -1.4rem;
+    /* top: -30.2rem; */
+    padding-top: 0.7rem;
+    background-color: #222222;
+    opacity: 0;
+    transition: display 400ms ease;
+}
+.select-container .options li{
+    /* background-color: yellow; */
+    width: min-content;
+    transform: translateX(-80%);
+}
+
+/* toggling the languages list */
+.select-container .options.show{
+    display: flex;
+    opacity: 1;
+}
+
+@keyframes top{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}

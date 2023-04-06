@@ -1,0 +1,68 @@
+.videoContainer {
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh - 66px);
+  left: 100vw;
+}
+
+.icons {
+  gap: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.call {
+  font-size: 3rem;
+  color: rgb(13, 255, 13);
+  cursor: pointer;
+}
+
+.endcall {
+  font-size: 3rem;
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+  rotate: 45deg;
+}
+
+.call:hover {
+  rotate: 45deg;
+}
+.endcall:hover {
+  rotate: 0deg;
+}
+
+.video {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.userVideo video,
+.peerVideo video {
+  width: 15rem;
+  /* height: 15rem; */
+  /* border-radius: 50%; */
+  border: 1px solid white;
+}
+
+.mute {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.audioMute,
+.videoMute {
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+h1:hover {
+  cursor: copy;
+}
+
+.muted {
+  color: var(--secondary-color);
+}

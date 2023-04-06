@@ -1,0 +1,47 @@
+@import url("../../color.css");
+
+.prjContainer {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.prjHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1.5rem;
+  border-bottom: 4px solid #fff;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.prjList {
+  width: 70%;
+  cursor: pointer;
+}
+
+.prjList .wrapper {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.prjList .tech {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.prjList a {
+  text-decoration: none;
+  color: var(--primary-color);
+}

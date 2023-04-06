@@ -1,0 +1,51 @@
+@import url("../../color.css");
+
+.menu {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.menu.menuRotate.active {
+  transform: rotate(45deg);
+}
+
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: var(--icon-color, #818181);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+.menu .top {
+  stroke-dasharray: 40 160;
+}
+.menu .middle {
+  stroke-dasharray: 40 142;
+  transform-origin: 77% 92%;
+  transition: transform 400ms;
+}
+.menu .bottom {
+  stroke-dasharray: 40 85;
+  transform-origin: 50%;
+  transition: transform 400ms, stroke-dashoffset 400ms;
+}
+.menu.active .top {
+  stroke-dashoffset: -64px;
+  stroke: var(--icon-hover-color, #fff);
+}
+.menu.active .middle {
+  transform: rotate(90deg);
+  stroke: var(--icon-hover-color, #fff);
+}
+.menu.active .bottom {
+  stroke-dashoffset: -64px;
+  stroke: var(--icon-hover-color, #fff);
+}
+
+.menu:hover .line {
+  stroke: var(--icon-hover-color, #fff);
+}

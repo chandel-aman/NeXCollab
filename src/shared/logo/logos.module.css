@@ -1,0 +1,34 @@
+@import url("../../color.css");
+
+.svg-icons {
+  width: 40px;
+  height: 40px;
+}
+
+.svg-icons svg {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.svg-icons svg path {
+  fill: var(--icon-color);
+}
+
+.svg-icons svg:hover path{
+  fill: #fff;
+}
+
+.svg-icons svg:focus path{
+  fill: #fff;
+}
+
+/* add user */
+.svg-icons svg g:not(.svg-icons.lng) {
+  fill: var(--icon-color);
+}
+
+/* add user active */
+.svg-icons.addUser.active svg g {
+  fill: var(--icon-color);
+}

@@ -1,0 +1,29 @@
+@import url('../../../color.css');
+
+.gallery{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.slider{
+    height: inherit;
+    width: 90%;
+}
+
+.images{
+    height: 25rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    border-radius: 20px;
+}
+
+.images div h1{
+    padding-right: 1rem;
+}

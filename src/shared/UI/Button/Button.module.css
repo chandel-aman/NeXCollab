@@ -1,0 +1,29 @@
+@import url('../../../color.css');
+
+.button{
+    padding: 5px 10px;
+    width: 70px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.dark{
+    border: 2px solid var(--assent-color);
+    background-color: transparent;
+    color: var(--assent-color);
+}
+.dark:hover{
+    background-color: var(--assent-color);
+}
+
+.light{
+    background-color: var(--secondary-color);
+    color: #060C0E;
+}
+.light:hover{
+    background-color: transparent;
+    color: var(--assent-color);
+    border: 1px solid #fff;
+}

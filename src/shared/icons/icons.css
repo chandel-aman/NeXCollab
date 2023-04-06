@@ -1,0 +1,114 @@
+@import url("../../color.css");
+
+.svg-icons {
+  width: 40px;
+  height: 40px;
+}
+
+.svg-icons svg {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  fill: var(--icon-color);
+}
+
+.svg-icons.code svg path {
+  stroke-width: 4px;
+}
+
+/* add user */
+.svg-icons svg g:not(.svg-icons.lng) {
+  fill: var(--icon-color);
+}
+
+/* add user active */
+.svg-icons.addUser.active svg g {
+  fill: var(--accent-color);
+}
+
+/* version control */
+.svg-icons.vc svg path,
+.svg-icons.vc svg circle,
+.svg-icons.vc svg line {
+  stroke: var(--icon-color);
+}
+
+/* save */
+.svg-icons.save {
+  height: 35px;
+  width: 35px;
+}
+
+/* save */
+.svg-icons.save svg path,
+.svg-icons.save svg rect,
+.svg-icons.save svg line {
+  stroke: var(--icon-color);
+}
+
+/* hover over add user
+*/
+.svg-icons:not(.vc, .lng, .save, .broom):hover path {
+  fill: var(--icon-hover-color);
+}
+
+/* version control hover */
+.svg-icons.vc :hover path,
+.svg-icons.vc :hover line,
+.svg-icons.vc :hover circle {
+  stroke: var(--icon-hover-color);
+}
+
+/* save hover*/
+.svg-icons.save :hover path,
+.svg-icons.save :hover rect,
+.svg-icons.save :hover line {
+  stroke: var(--icon-hover-color);
+}
+
+/* language hover */
+.svg-icons svg:hover {
+  fill: var(--icon-hover-color);
+}
+
+/* language active */
+.svg-icons.active svg{
+  fill: var(--icon-hover-color);
+}
+
+/* code */
+.svg-icons.code svg polyline,
+.svg-icons.code svg line{
+  stroke: var(--icon-color);
+  stroke-width: 3;
+}
+/* code hover*/
+.svg-icons.code svg:hover polyline,
+.svg-icons.code svg:hover line{
+  stroke: var(--icon-hover-color);
+}
+/* code active */
+.svg-icons.code.active svg polyline,
+.svg-icons.code.active svg line{
+  stroke: var(--icon-hover-color);
+}
+
+/* broom animation */
+.svg-icons.broom.active svg{
+  animation: clear 500ms;
+}
+
+@keyframes clear {
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
